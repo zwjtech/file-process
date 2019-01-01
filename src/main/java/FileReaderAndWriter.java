@@ -5,14 +5,15 @@ import java.io.*;
  */
 public class FileReaderAndWriter {
 
-    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
+    public static void main(String[] args) throws IOException {
 
         //不带缓存
         FileReader fr = new FileReader("test.txt");
 
         //带缓存读
         BufferedReader br =  new BufferedReader(new FileReader("in.txt"));
-
+        String line = null;
+        line = br.readLine();
         //带缓存读
         BufferedReader br0 =  new BufferedReader(new FileReader("in.txt"),1024*8);
 
